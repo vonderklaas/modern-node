@@ -4,10 +4,10 @@ import { errorResponse } from "../utils/responses.js";
 export function errroHandler(
   err: any,
   req: Request,
-  response: Response,
+  res: Response,
   next: NextFunction
 ) {
   console.error(err);
-  errorResponse(response, 500, err);
+  errorResponse(res, 500, err);
   next();
 }
